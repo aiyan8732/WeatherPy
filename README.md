@@ -915,13 +915,112 @@ for index, row in city_df.iterrows():
 
 
 ```python
-# replace empty cell by nan, drop rows including nan
+# replace empty cell by nan, drop rows including nan, print final city number with complete data
 city_df.replace('', np.nan, inplace=True)
 city_df = city_df.dropna(axis=0, how='any')
 print(len(city_df["City"]))
 ```
 
     637
+
+
+
+```python
+# display dataframe
+city_df.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>City</th>
+      <th>Cloudiness</th>
+      <th>Country</th>
+      <th>Humidity</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Temperature (F)</th>
+      <th>Wind Speed (mph)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>vanimo</td>
+      <td>92.0</td>
+      <td>pg</td>
+      <td>100.0</td>
+      <td>-2.67</td>
+      <td>141.30</td>
+      <td>82.95</td>
+      <td>13.13</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>port alfred</td>
+      <td>92.0</td>
+      <td>za</td>
+      <td>80.0</td>
+      <td>-33.59</td>
+      <td>26.89</td>
+      <td>76.20</td>
+      <td>6.20</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>karakol</td>
+      <td>88.0</td>
+      <td>kg</td>
+      <td>92.0</td>
+      <td>42.49</td>
+      <td>78.39</td>
+      <td>26.97</td>
+      <td>1.61</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>beringovskiy</td>
+      <td>76.0</td>
+      <td>ru</td>
+      <td>96.0</td>
+      <td>63.05</td>
+      <td>179.32</td>
+      <td>28.05</td>
+      <td>5.19</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>moroto</td>
+      <td>32.0</td>
+      <td>ug</td>
+      <td>66.0</td>
+      <td>2.53</td>
+      <td>34.66</td>
+      <td>72.33</td>
+      <td>6.31</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 
 
@@ -944,7 +1043,7 @@ plt.show()
 ```
 
 
-![png](output_6_0.png)
+![png](output_7_0.png)
 
 
 
@@ -961,7 +1060,7 @@ plt.show()
 ```
 
 
-![png](output_7_0.png)
+![png](output_8_0.png)
 
 
 
@@ -978,7 +1077,7 @@ plt.show()
 ```
 
 
-![png](output_8_0.png)
+![png](output_9_0.png)
 
 
 
@@ -995,5 +1094,5 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](output_10_0.png)
 
